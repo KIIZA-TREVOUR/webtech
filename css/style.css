@@ -1,0 +1,72 @@
+/* Reset some default styles for browsers */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.section {
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: #f2f2f2;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden; /* Add this to clear the floated section titles */
+}
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    padding: 5px 10px;
+    border: 2px solid black;
+    font-size: 25px;
+    z-index: 1; /* Ensure titles are above content */
+}
+
+/* Add some margin or padding to the paragraph text */
+.section p {
+    margin-top: 40px; /* Adjust as needed */
+}
+
+/* Add thick border to the sections */
+.section.beef, .section.sushi, .section.chicken {
+    border-width: 4px;
+}
+
+/* Media Queries for Tablet and Mobile Views */
+@media (max-width: 991px) {
+    .section {
+        width: 50%;
+    }
+
+    .section:nth-child(3) {
+        clear: both;
+        width: 100%;
+    }
+
+    /* Adjust title positioning for tablet */
+    .section-title {
+        top: 5px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+    }
+
+    /* Adjust title positioning for mobile */
+    .section-title {
+        top: 5px;
+        right: 5px;
+    }
+}
